@@ -6,31 +6,29 @@ nav li {
     list-style: none;
 }
 
-nav a li{
+nav li a{
     color: black;
     font-size: 1.4rem;
     text-transform: capitalize;
 }
 
-nav a:hover li{
-    background-color: black ;
-    color: #fff;
-    font-size: 1.5rem;
-    transition: background-color .8s ease-in-out, color .4s, font-size .8s ease-out ;
+nav li:hover{
+    border-bottom: .2rem solid black ;
+    transition: border-bottom .2s ease-in-out
 }
 
-.nav-collapser .toggle-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+nav li:hover a{
+    color: rgb(78, 73, 73);
+    transition: color .4s ease-out
+}
+
+@media screen and (max-width:784px) {
+    nav li:hover{
+        border: .2rem solid black ;
+        transition: border .2s ease-in-out;
+        width: 100%;
+        display: block;
+    }
     
-}
-
-@media screen and (max-width:768px){
-    .nav-collapser {
-        display: block !important;
-    }
-
-    ul {
-        display: none !important;
-    }
 }
 
