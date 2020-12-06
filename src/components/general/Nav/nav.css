@@ -1,0 +1,36 @@
+img {
+    max-width: 40% !important;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a li{
+    color: black;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+nav a:hover li{
+    background-color: black ;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: background-color .8s ease-in-out, color .4s, font-size .8s ease-out ;
+}
+
+.nav-collapser .toggle-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+    
+}
+
+@media screen and (max-width:768px){
+    .nav-collapser {
+        display: block !important;
+    }
+
+    ul {
+        display: none !important;
+    }
+}
+
