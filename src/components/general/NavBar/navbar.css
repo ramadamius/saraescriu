@@ -1,0 +1,79 @@
+.operatives {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+.menu-toggler {
+    color: #000;
+}
+
+.navBar-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navBar-list-item {
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navBar-list-item a {
+    color: black;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+nav li:hover {
+    border-bottom: .2rem solid black;
+    transition: border-bottom .2s ease-in-out
+}
+
+.nav-opened {
+    display: flex !important;
+    transition: display .5s ease-in;
+}
+
+.nav-closed {
+    display: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu-toggler {
+        display: inline-block;
+        font-size: 1.6rem;
+    }
+    .navBar-list {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .navBar-list li:first-child {
+        margin-top: .5rem;
+    }
+    .navBar-list-item:not(:first-child) {
+        margin-top: .3rem;
+        margin-bottom: .1rem;
+    }
+    .navBar-list-item:hover {
+        background-color: black;
+        transition: background-color .2s ease-in-out;
+        justify-content: center;
+    }
+    .navBar-list-item:hover a {
+        color: #fff;
+        text-align: center;
+    }
+    .navBar-list {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:769px) {
+    .navBar-list {
+        display: flex!important;
+    }
+}
