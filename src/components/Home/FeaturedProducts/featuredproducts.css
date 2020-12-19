@@ -12,8 +12,7 @@
 
 .featured-products-title {
     text-align: center;
-    text-transform: capitalize;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .featured-products-list {
@@ -27,14 +26,18 @@
     line-height: 1.2rem;
 }
 
+.featured-products-list li {
+    transition: .6s ease-in-out;
+}
+
+.featured-products-list li:hover {
+    border: 1px solid #000;
+}
+
 @media screen and (min-width:801px) {
     .featured-products-list li {
         list-style: none;
         max-width: 24%;
-        transition: .6s ease-in-out;
-    }
-    .featured-products-list li:hover {
-        transform: scale(1.1);
     }
 }
 

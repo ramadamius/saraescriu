@@ -10,7 +10,10 @@ const ProductBox = ({ title, price, img, alt }) => {
                 <h3 className="product-title">{title}</h3>
                 <p className="product-price">{price}</p>
                 <ItemCount/>
-                <a href="#" className="addToCart"><FaShoppingBag/><span>añadir</span></a>
+                <a href="#" className="addToCart">
+                    <FaShoppingBag/>
+                    <span>añadir</span>
+                </a>
             </div>
         </article>
     );

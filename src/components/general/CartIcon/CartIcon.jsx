@@ -7,7 +7,6 @@ const CartWidget = () => {
             <a href="#" className="cartIcon">
                 <FaShoppingBag />
             </a>
-            <span className="counter">0</span>
         </div>
     );
 }

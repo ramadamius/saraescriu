@@ -1,29 +1,13 @@
 a.cartIcon {
-    margin-right: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #000;
 }
 
 .nav-icon {
-    position: relative;
-    margin-left: .5rem;
-}
-
-.counter {
     display: flex;
-    flex-flow: column;
-    position: absolute;
-    bottom: 25px;
-    right: 32px;
-    border-radius: 50%;
-    background: #000;
-    font-weight: 600;
-    width: 1.2rem;
-    height: 1.2rem;
-    text-align: center;
-    color: #fff;
-    font-size: .9rem;
+    flex-flow: row nowrap;
     justify-content: center;
+    margin-top: 1rem;
 }
 
 @media only screen and (max-width: 768px) {

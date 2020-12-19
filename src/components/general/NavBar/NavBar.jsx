@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
-import CartIcon from '../CartIcon/CartIcon';
 import './navbar.css';
 
 const NavBar = () => {
@@ -13,17 +12,16 @@ const NavBar = () => {
 
     return (
         <>
-            <div className="operatives">
+            <div className="menu-toggler-container">
                 <a href="#" className="menu-toggler hidden" onClick={openNavBar}><HiMenu /></a>
-                <CartIcon />
             </div>
 
             <nav className="navBar">
                 <ul className={`navBar-list ${showNavBar ? 'nav-opened' : 'nav-closed'}`}>
                     <li className="navBar-list-item"><a href="#">About us</a></li>
                     <li className="navBar-list-item"><a href="#">Shop now</a></li>
-                    <li className="navBar-list-item"><a href="#">SlowBlog zone</a></li>
-                    <li className="navBar-list-item"><a href="#">Contact us</a></li>
+                    <li className="navBar-list-item"><a href="#">Slow Blog zone</a></li>
+                    <li className="navBar-list-item"><a href="#" className="text-cap">Contact us</a></li>
                 </ul>
             </nav>
         </>
