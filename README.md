@@ -1,3 +1,9 @@
+About Sara Escriu:
+
+Sara escriu es una marca de ropa sustentable, nacida en España por una creadora Uruguaya. Busca a través de sus prendas impulsar la reutilización de vestimentas y así, lograr una marca preocupada por el medio ambiente. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

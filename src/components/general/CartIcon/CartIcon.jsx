@@ -1,10 +1,10 @@
 import { FaShoppingBag } from "react-icons/fa";
 import './cartIcon.css';
 
-const CartWidget = () => {
+const CartWidget = ({action}) => {
     return (
         <div className="nav-icon">
-            <a href="#" className="cartIcon">
+            <a href="#" onClick={action} className="cartIcon">
                 <FaShoppingBag />
             </a>
         </div>

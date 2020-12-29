@@ -25,7 +25,7 @@ const ProductDetail = ({ img, title, price, description, sizes, colors }) => {
                     <p className="sizes-title product-detail-subtitle">Talles disponibles:</p>
                     <ul className="sizes-list">
                         {
-                            sizes.length > 1
+                            sizes
                                 ? sizes.map(size => <li className="size">{size}</li>)
                                 : <li className="size">Talle único</li>
                         }
@@ -36,7 +36,7 @@ const ProductDetail = ({ img, title, price, description, sizes, colors }) => {
                      <p className="colors-title product-detail-subtitle">Colores disponibles:</p>
                      <ul className="color-list">
                          {
-                             colors.length > 1 
+                             colors
                                  ? colors.map(
                                      color => <div className="color-container">
                                                  <li className="color"><a href="#" className={`color-icon ${color}`}></a></li>

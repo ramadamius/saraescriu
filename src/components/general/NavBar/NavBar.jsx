@@ -20,9 +20,9 @@ const NavBar = () => {
             <nav className="navBar">
                 <ul className={`navBar-list ${showNavBar ? 'nav-opened' : 'nav-closed'}`}>
                     <li className="navBar-list-item"><Link to="/aboutUs">About us</Link></li>
-                    <li className="navBar-list-item"><a href="#">Shop now</a></li>
-                    <li className="navBar-list-item"><a href="#">Slow Blog zone</a></li>
-                    <li className="navBar-list-item"><a href="#" className="text-cap">Contact us</a></li>
+                    <li className="navBar-list-item"><Link to="/showNow">Shop now</Link></li>
+                    <li className="navBar-list-item"><Link to="/slowBlogZone">Slow Blog zone</Link></li>
+                    <li className="navBar-list-item"><Link to="/contactUs">Contact us</Link></li>
                 </ul>
             </nav>
         </>

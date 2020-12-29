@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 /*This const simulates a data storage for products*/ 
 const fakeData = [
     {
-        product_id: 1,
+        product_id: 4,
         product_title: 'Correas MASCARILLAS',
         product_price: '€5.00',
         product_image: correasMascarillas,
@@ -30,7 +30,7 @@ const fakeData = [
         product_alt_msg : 'Imagen de the B/Bucket Hat'
     },
     {
-        product_id: 4,
+        product_id: 1,
         product_title: 'Sweater INDIE',
         product_price: '€30',
         product_image: sweaterindie,
@@ -60,7 +60,7 @@ const FeaturedProducts = () => {
                 <ul className="featured-products-list">
                     {
                         items.map(item => (
-                            <li><ProductBox title={item.product_title} img={item.product_image} alt={item.product_alt_msg} price={item.product_price}/></li>
+                            <li><ProductBox productId= {item.product_id} title={item.product_title} img={item.product_image} alt={item.product_alt_msg} price={item.product_price}/></li>
                         ))
                     }
                 </ul>
