@@ -62,6 +62,11 @@ function App() {
         /Route>
 
         <
+        Route path = '/cartReview' >
+        <
+        ComingSoon / >
+        <
+        /Route> <
         /Switch> <
         Footer / >
         <

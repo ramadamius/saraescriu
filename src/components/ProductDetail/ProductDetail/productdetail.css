@@ -164,7 +164,7 @@
 }
 
 .add-to-cart {
-    max-width: 10%;
+    max-width: 30%;
     margin-right: auto;
     text-decoration: none;
     color: #000;
@@ -172,19 +172,4 @@
     margin-bottom: 1rem;
     padding: 2px 4px;
     border: 1px solid #fff;
-}
-
-.add-to-cart span {
-    margin-left: 6px;
-    padding-right: 2px;
-}
-
-.add-to-cart svg {
-    margin-bottom: 5px;
-    padding-left: 2px;
-}
-
-.add-to-cart:hover {
-    border: 1px solid #000;
-    color: #000;
 }

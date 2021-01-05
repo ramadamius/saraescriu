@@ -1,6 +1,4 @@
 import './productbox.css';
-import { FaShoppingBag } from "react-icons/fa";
-import ItemCount from '../../general/ItemCount/ItemCount';
 import {Link} from 'react-router-dom';
 
 const ProductBox = ({ title, price, img, alt, productId }) => {
@@ -10,7 +8,7 @@ const ProductBox = ({ title, price, img, alt, productId }) => {
             <div className="product-info">
                 <h3 className="product-title">{title}</h3>
                 <p className="product-price">{price}</p>
-                <ItemCount/>
+                {/* <ItemCount/> */}
                 <Link to={`productDetail/${productId}`} className="addToCart">
                     <span>Ver más</span>
                 </Link>

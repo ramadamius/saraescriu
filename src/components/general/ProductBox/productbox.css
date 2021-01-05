@@ -46,13 +46,8 @@ img {
 }
 
 .addToCart span {
-    padding-left: .3rem;
-}
-
-.addToCart:hover {
-    background: #000;
-    color: #fff;
-    transition: all .3s;
+    padding: 0 .4rem;
+    border: 1px solid #000;
 }
 
 @media screen and (min-width:670px) {

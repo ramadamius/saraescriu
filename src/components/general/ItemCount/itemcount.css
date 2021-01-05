@@ -2,8 +2,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    width: 80%;
-    margin-left: auto;
+    width: 30%;
     margin-right: auto;
 }
 

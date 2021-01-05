@@ -1,8 +1,18 @@
 import './productdetail.css';
 import { FaShoppingBag } from "react-icons/fa";
+import ItemCount from '../../general/ItemCount/ItemCount';
+import { Redirect } from 'react-router-dom';
+import { useState } from 'react';
 
 const ProductDetail = ({ img, title, price, description, sizes, colors }) => {
-    console.log(title,sizes,colors);
+    const [redirect,setRedirect] = useState(false);
+
+    const handlergoToCart = () => {
+        setRedirect(true);
+    }
+
+    if (redirect) return <Redirect to='/cartReview'/>
+
     return (
         <section className="product-detail-container">
             <img className="product-img" src={img} alt={title} />
@@ -31,24 +41,27 @@ const ProductDetail = ({ img, title, price, description, sizes, colors }) => {
                         }
                     </ul>
                 </div>
-             
-                 <div className="colors">
-                     <p className="colors-title product-detail-subtitle">Colores disponibles:</p>
-                     <ul className="color-list">
-                         {
-                             colors
-                                 ? colors.map(
-                                     color => <div className="color-container">
-                                                 <li className="color"><a href="#" className={`color-icon ${color}`}></a></li>
-                                             </div>
-                                     )  
-                                 : <li className="color">Color único</li>
-                         }
-                     </ul>
-                 </div> 
+
+                <div className="colors">
+                    <p className="colors-title product-detail-subtitle">Colores disponibles:</p>
+                    <ul className="color-list">
+                        {
+                            colors
+                                ? colors.map(
+                                    color => <div className="color-container">
+                                        <li className="color"><a href="#" className={`color-icon ${color}`}></a></li>
+                                    </div>
+                                )
+                                : <li className="color">Color único</li>
+                        }
+                    </ul>
+                </div>
+
+                <ItemCount />
 
                 <div className="add-to-cart-btn">
-                    <a href="#" className="add-to-cart"><FaShoppingBag /><span>Comprar</span></a>
+
+                    <input type='button' className="add-to-cart" onClick={handlergoToCart} value='Comprar'/>
                 </div>
 
             </div>

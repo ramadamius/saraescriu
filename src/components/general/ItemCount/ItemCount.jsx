@@ -8,6 +8,7 @@ const ItemCount = () => {
     const addItem = () => {
         setCount(count+1);
     }
+    
     const removeItem = () => {
         count > 0 ? setCount(count-1) : setCount(count);
     }
