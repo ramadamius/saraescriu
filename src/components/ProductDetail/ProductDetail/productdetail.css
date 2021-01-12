@@ -173,3 +173,38 @@
     padding: 2px 4px;
     border: 1px solid #fff;
 }
+
+
+/* Counter */
+
+.counter-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 30%;
+    margin-right: auto;
+}
+
+.counter-display {
+    color: #000;
+    font-size: 1rem;
+    text-align: center;
+    background: #fff;
+    width: 20%;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.counterBtn {
+    color: #000;
+}
+
+.increaser:hover {
+    color: rgb(57, 133, 80);
+    transition: all .3s ease-in-out;
+}
+
+.reducer:hover {
+    color: rgb(197, 63, 30);
+    transition: all .3s ease-in-out;
+}

@@ -19,7 +19,8 @@ const ProductDetailDM = () => {
             img: sweaterIndie,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
             sizes: ['S','M','L'],
-            colors: ['verde','beige','rosa']
+            colors: ['verde','beige','rosa'],
+            qty:0
         },
         {
             id: 2,
@@ -28,7 +29,8 @@ const ProductDetailDM = () => {
             img: poleraAnna,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
             sizes: ['S','M','L'],
-            colors: ['verde','beige','rosa']
+            colors: ['verde','beige','rosa'],
+            qty:0
         },
         {
             id: 3,
@@ -36,7 +38,8 @@ const ProductDetailDM = () => {
             price: '€15',
             img: thebbuket,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
-            colors: ['verde','beige','rosa']
+            colors: ['verde','beige','rosa'],
+            qty:0
         },
         {
             id: 4,
@@ -44,7 +47,8 @@ const ProductDetailDM = () => {
             price: '€5',
             img: correa,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
-            colors: ['verde','beige','rosa']
+            colors: ['verde','beige','rosa'],
+            qty:0
         }
     ]
 
@@ -62,7 +66,7 @@ const ProductDetailDM = () => {
     },[]);
 
     return ( 
-        <ProductDetail title={product.title} img={product.img} price={product.price} description={product.description} sizes={product.sizes} colors={product.colors}/>
+        <ProductDetail product={product}/>
      );
 }
  

@@ -5,11 +5,20 @@ import ProductDetailDM from './components/ProductDetail/ProductDetailDM/ProductD
 import Footer from './components/general/Footer/Footer';
 import ComingSoon from './components/general/ComingSoon/ComingSoon';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Store } from './store';
+import { useState } from 'react';
 
 
 function App() {
+    const [data, setData] = useState({
+        items: [],
+    });
 
     return ( <
+        Store.Provider value = {
+            [data, setData]
+        } >
+        <
         div className = 'App' >
         <
         BrowserRouter >
@@ -66,12 +75,14 @@ function App() {
         <
         ComingSoon / >
         <
-        /Route> <
-        /Switch> <
+        /Route> < /
+        Switch > <
         Footer / >
         <
         /BrowserRouter> < /
         div >
+        <
+        /Store.Provider>
     );
 }
 
