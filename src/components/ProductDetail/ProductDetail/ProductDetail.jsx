@@ -28,6 +28,9 @@ const ProductDetail = ({ product }) => {
             });
         } else {
             data.items[data.items.findIndex(item => item.id === parseInt(product.id))].qty += countProd;
+            setData({
+                items: [...data.items]
+            })
         }
     }
 
