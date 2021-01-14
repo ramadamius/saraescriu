@@ -15,7 +15,7 @@ const ProductDetailDM = () => {
         {
             id: 1,
             title: 'Sweater INDIE',
-            price: '€30',
+            price: 30,
             img: sweaterIndie,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
             sizes: ['S','M','L'],
@@ -25,7 +25,7 @@ const ProductDetailDM = () => {
         {
             id: 2,
             title: 'Polera ANNA',
-            price: '€22',
+            price: 22,
             img: poleraAnna,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
             sizes: ['S','M','L'],
@@ -35,7 +35,7 @@ const ProductDetailDM = () => {
         {
             id: 3,
             title: 'The B/BUCKET Hat',
-            price: '€15',
+            price: 15,
             img: thebbuket,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
             colors: ['verde','beige','rosa'],
@@ -44,7 +44,7 @@ const ProductDetailDM = () => {
         {
             id: 4,
             title: 'Correas MASCARILLA',
-            price: '€5',
+            price: 5,
             img: correa,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi ducimus non temporibus nesciunt impedit quaerat optio, voluptatibus eaque eius magni excepturi reiciendis voluptas a odio vitae expedita nulla veniam? Et!',
             colors: ['verde','beige','rosa'],

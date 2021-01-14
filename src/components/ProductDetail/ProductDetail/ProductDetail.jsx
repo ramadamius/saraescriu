@@ -43,7 +43,7 @@ const ProductDetail = ({ product }) => {
                     <h3 className="product-name">{product.title}</h3>
                     <div className="price">
                         <p className="product-price-title product-detail-subtitle">Precio:</p>
-                        <p className="product-price-val">{product.price}</p>
+                        <p className="product-price-val">{`€ ${product.price}`}</p>
                     </div>
                 </div>
 

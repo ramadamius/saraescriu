@@ -15,10 +15,10 @@ const Cart = ({ }) => {
         })
     }
 
-    const displayTotalItemAmount = () => {
+    const displayTotalPrice = () => {
         let total = 0;
         for (let i=0;i<items.length;i++){
-            total += items[i].qty;
+            total += (items[i].qty*items[i].price);
         }
         return total;
     }
@@ -31,7 +31,7 @@ const Cart = ({ }) => {
                         <div className="cart-title">
                             <h2>Tu carrito</h2>
                             <p className="items-total">{
-                                `Total de productos en el carrito: ${displayTotalItemAmount()}`
+                                `Total a pagar: €${displayTotalPrice()}`
                             }</p>
                         </div>
                         <ul>
