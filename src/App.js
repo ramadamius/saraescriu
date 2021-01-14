@@ -4,6 +4,7 @@ import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProduct
 import ProductDetailDM from './components/ProductDetail/ProductDetailDM/ProductDetailDM';
 import Footer from './components/general/Footer/Footer';
 import ComingSoon from './components/general/ComingSoon/ComingSoon';
+import Cart from './components/Cart/Cart';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Store } from './store';
 import { useState } from 'react';
@@ -71,9 +72,9 @@ function App() {
         /Route>
 
         <
-        Route path = '/cartReview' >
+        Route path = '/cart' >
         <
-        ComingSoon / >
+        Cart / >
         <
         /Route> < /
         Switch > <

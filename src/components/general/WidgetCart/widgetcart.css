@@ -41,6 +41,24 @@
     justify-content: space-around;
 }
 
+.no-items-widget {
+    color: #fff;
+    margin-top: 5rem;
+    max-width: 80%;
+    text-align: center;
+}
+
+.go-to-cart-btn {
+    width: 40%;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #000;
+    font-size: 1.2rem;
+    margin-left: 40%;
+    margin-top: 1rem;
+}
+
 .cart-item-container {
     display: flex;
     flex-flow: row nowrap;
