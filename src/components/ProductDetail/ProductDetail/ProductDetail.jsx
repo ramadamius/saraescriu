@@ -8,26 +8,26 @@ const ProductDetail = ({ product }) => {
     const [data, setData] = useContext(Store);
 
     const addItem = () => {
-        setCountProd(countProd+1);
+        setCountProd(countProd + 1);
     }
 
     const removeItem = () => {
-        countProd > 1 ? setCountProd(countProd-1) : setCountProd(countProd);
+        countProd > 1 ? setCountProd(countProd - 1) : setCountProd(countProd);
     }
 
     const addToCart = () => {
-        if(!data.items.filter(item => item.id === parseInt(product.id)).length>0){
-            if(countProd > 0) {
-                product.qty = countProd;
-            }else {
-                product.qty = 1;
+        if (!data.items.filter(item => item.id === product.id).length > 0) {
+            if (countProd > 0) {
+                product.data.qty = countProd;
+            } else {
+                product.data.qty = 1;
             }
             setData({
                 ...data,
-                items: [...data.items,product]
+                items: [...data.items, product]
             });
         } else {
-            data.items[data.items.findIndex(item => item.id === parseInt(product.id))].qty += countProd;
+            data.items[data.items.findIndex(item => item.id === product.id)].data.qty += countProd;
             setData({
                 items: [...data.items]
             })
@@ -36,28 +36,28 @@ const ProductDetail = ({ product }) => {
 
     return (
         <section className="product-detail-container">
-            <img className="product-img" src={product.img} alt={product.title} />
+            <img className="product-img" src={product.data.img} alt={product.data.title} />
             <div className="product-info-container">
 
                 <div className="title-and-price">
-                    <h3 className="product-name">{product.title}</h3>
+                    <h3 className="product-name">{product.data.title}</h3>
                     <div className="price">
                         <p className="product-price-title product-detail-subtitle">Precio:</p>
-                        <p className="product-price-val">{`€ ${product.price}`}</p>
+                        <p className="product-price-val">{`€ ${product.data.price}`}</p>
                     </div>
                 </div>
 
                 <div className="description-container">
                     <p className="product-description-title product-detail-subtitle">Descripción del producto:</p>
-                    <p className="product-description">{product.description}</p>
+                    <p className="product-description">{product.data.description}</p>
                 </div>
 
                 <div className="sizes">
                     <p className="sizes-title product-detail-subtitle">Talles disponibles:</p>
                     <ul className="sizes-list">
                         {
-                            product.sizes
-                                ? product.sizes.map(size => <li className="size">{size}</li>)
+                            product.data.sizes
+                                ? product.data.sizes.map(size => <li className="size">{size}</li>)
                                 : <li className="size">Talle único</li>
                         }
                     </ul>
@@ -67,8 +67,8 @@ const ProductDetail = ({ product }) => {
                     <p className="colors-title product-detail-subtitle">Colores disponibles:</p>
                     <ul className="color-list">
                         {
-                            product.colors
-                                ? product.colors.map(
+                            product.data.colors
+                                ? product.data.colors.map(
                                     color => <div className="color-container">
                                         <li className="color"><a href="#" className={`color-icon ${color}`}></a></li>
                                     </div>

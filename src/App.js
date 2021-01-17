@@ -4,6 +4,7 @@ import FeaturedProducts from './components/Home/FeaturedProducts/FeaturedProduct
 import ProductDetailDM from './components/ProductDetail/ProductDetailDM/ProductDetailDM';
 import Footer from './components/general/Footer/Footer';
 import ComingSoon from './components/general/ComingSoon/ComingSoon';
+import ShopNow from './components/ShopNow/ShopNow';
 import Cart from './components/Cart/Cart';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Store } from './store';
@@ -46,7 +47,7 @@ function App() {
         <
         Route path = '/shopNow' >
         <
-        ComingSoon / >
+        ShopNow / >
         <
         /Route>
 

@@ -18,7 +18,7 @@ const WidgetCart = ({ show, action }) => {
     }
 
     const deleteItem = itemId => {
-        const filteredItems = data.items.filter(item => item.id != parseInt(itemId));
+        const filteredItems = data.items.filter(item => item.id != itemId);
         setData({
             items: filteredItems
         })
@@ -34,7 +34,7 @@ const WidgetCart = ({ show, action }) => {
             {
                 items.length > 0
                     ? <>
-                        <h3 className="cart-title">Resumen del carrito</h3>
+                        <h3 className="cart-widget-title">Resumen del carrito</h3>
 
                         <div className="delete-all-container">
                             <input type='button' id='delete-all' className="deleteItem" onClick={deleteAll} value='Delete All' />
@@ -45,12 +45,12 @@ const WidgetCart = ({ show, action }) => {
                                 {
                                     data.items.map(item =>
                                         <li className="cart-item-container">
-                                            <p className="item-title">{item.title}</p>
-                                            <img className='item-img' src={item.img} alt={item.title} />
+                                            <p className="item-title">{item.data.title}</p>
+                                            <img className='item-img' src={item.data.img} alt={item.data.title} />
                                             <div className="more-info">
-                                                <p className="item-qty">{`Cantidad: ${item.qty}`}</p>
-                                                <p className="item-size">{`Tamaño: ${item.sizes ? item.sizes : 'Talle único'}`}</p>
-                                                <p className="item-color">{`Color: ${item.colors ? item.colors : 'Color único'}`}</p>
+                                                <p className="item-qty">{`Cantidad: ${item.data.qty}`}</p>
+                                                <p className="item-size">{`Tamaño: ${item.data.sizes ? item.data.sizes : 'Talle único'}`}</p>
+                                                <p className="item-color">{`Color: ${item.data.colors ? item.data.colors : 'Color único'}`}</p>
                                                 <input type="button" value='Borrar' className='deleteItem' onClick={() => deleteItem(item.id)} />
                                             </div>
                                         </li>
