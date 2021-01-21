@@ -25,10 +25,6 @@ const Cart = ({ }) => {
         return total;
     }
 
-    const checkOut = () => {
-
-    }
-
     return (
         <>
             {
