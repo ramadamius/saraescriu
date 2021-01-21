@@ -40,7 +40,7 @@ const ShopNow = () => {
                     <ul className="category-list">
                         {
                             categories.map(category =>
-                                <li className="category-item" onClick={(e) => getCat(category)}>{category}</li>
+                                <li className="category-item" onClick={() => getCat(category)}>{category}</li>
                             )
                         }
                     </ul>

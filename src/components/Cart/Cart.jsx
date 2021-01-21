@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { getFirestore } from '../../firebase';
 import { Store } from '../../store';
 import './cart.css'
 
@@ -7,6 +8,7 @@ const Cart = ({ }) => {
 
     const [data, setData] = useContext(Store);
     const { items } = data;
+    const db = getFirestore();
 
     const deleteItem= itemId => {
         const filteredItems = data.items.filter(item => item.id != itemId);
@@ -21,6 +23,10 @@ const Cart = ({ }) => {
             total += (items[i].data.qty*items[i].data.price);
         }
         return total;
+    }
+
+    const checkOut = () => {
+
     }
 
     return (
@@ -51,6 +57,9 @@ const Cart = ({ }) => {
                                 )
                             }
                         </ul>
+                        <div className="check-out">
+                            <Link to='/checkout'> Check out</Link>
+                        </div>
                     </div> :
     <div className="cart-container no-item">
         <h3 className="no-items-title">No has agregado nada aún, agrega un producto para proceder con la compra :)</h3>

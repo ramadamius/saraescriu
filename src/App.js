@@ -6,6 +6,7 @@ import Footer from './components/general/Footer/Footer';
 import ComingSoon from './components/general/ComingSoon/ComingSoon';
 import ShopNow from './components/ShopNow/ShopNow';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Store } from './store';
 import { useState } from 'react';
@@ -52,6 +53,11 @@ function App() {
         /Route>
 
         <
+        Route path = '/checkout' >
+        <
+        Checkout / >
+        <
+        /Route> <
         Route path = '/slowBlogZone' >
         <
         ComingSoon / >
