@@ -44,10 +44,11 @@
 
 .items-list-container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 .item-container-sn {
-    max-width: 25%;
     width: 25%;
+    max-width: 25%;
+    flex-grow: 1 0 21%;
 }

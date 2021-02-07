@@ -46,13 +46,11 @@ function App() {
         /Route >
 
         <
-        Route path = '/shopNow' >
+        Route path = '/shopNow/:category' >
         <
         ShopNow / >
         <
-        /Route>
-
-        <
+        /Route> <
         Route path = '/checkout' >
         <
         Checkout / >

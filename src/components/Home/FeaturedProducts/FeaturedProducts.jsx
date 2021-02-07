@@ -10,7 +10,7 @@ const FeaturedProducts = () => {
 
     const getProducts = async () => {
         let arr = [];
-        const docs = await db.collection('products').get();
+        const docs = await db.collection('products').where('featured','==',true).get();
         docs.forEach(doc => arr.push({id:doc.id, data:doc.data()}));
         setItems(arr);
     }

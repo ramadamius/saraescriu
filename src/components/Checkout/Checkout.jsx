@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import firebase from 'firebase/app';
 import { Store } from '../../store';
 import './checkout.css';
@@ -32,10 +32,17 @@ const Checkout = () => {
     }
 
     const handleSubmitCheckout = async (e) => {
+        if (formData.email === formData.emailConfirmation) {
+            const purchaseDB = await db.collection('sales').add(purchase);
+            setSaleId(purchaseDB.id);
+            setSale(true);
+            setData({
+                items:[]
+            })
+        } else {
+            alert('Los emails no coinciden, por favor revisalos');
+        }
         e.preventDefault();
-        const purchaseDB = await db.collection('sales').add(purchase);
-        setSaleId(purchaseDB.id);
-        setSale(true);
     }
 
     return (
@@ -47,16 +54,16 @@ const Checkout = () => {
                         <input type="text" value={formData.name} name='name' placeholder='Inserta tu nombre' onChange={handleChangeInput} />
                         <input type="text" value={formData.surname} name='surname' placeholder='Inserta tu apellido' onChange={handleChangeInput} />
                         <input type="email" value={formData.email} name='email' placeholder='Inserta tu email' onChange={handleChangeInput} />
+                        <input type="email" value={formData.emailConfirmation} name='emailConfirmation' placeholder='Confirma tu email' onChange={handleChangeInput} />
                         <input type="tel" name="phone_number" placeholder='Inserta tu número de teléfono' onChange={handleChangeInput} />
                         <input type="button" value="Confirmar compra" onClick={handleSubmitCheckout} />
                     </form>
                 </div> :
                     <div className="success-container">
                         <h2 className="successful-sale-title">¡Compra realizada con éxito!</h2>
-                        <FaCheckCircle/>
+                        <FaCheckCircle />
                         <h4 className="successful-sale-subtitle">Detalles de tu compra:</h4>
                         <ul className="sale-detail-list">
-                            {/* <li className="success-date">{purchase.date}</li> */}
                             <li className="success-id">
                                 <span className="success-key">Id de la compra: </span>
                                 {saleId}

@@ -11,7 +11,8 @@ const ProductDetail = ({ product }) => {
         setCountProd(countProd + 1);
     }
 
-    const removeItem = () => {
+    const removeItem = (e) => {
+        e.preventDefault();
         countProd > 1 ? setCountProd(countProd - 1) : setCountProd(countProd);
     }
 
@@ -79,13 +80,13 @@ const ProductDetail = ({ product }) => {
                 </div>
 
                 <div className="counter-wrapper">
-                    <a href="#" className="counterBtn reducer" onClick={removeItem}><FaMinusCircle /></a>
+                    <input type="button" className="counterBtn reducer" onClick={removeItem}><FaMinusCircle /></input>
                     <p className="counter-display">{countProd}</p>
-                    <a href="#" className="counterBtn increaser" onClick={addItem}><FaPlusCircle /></a>
+                    <input type="button" className="counterBtn increaser" onClick={addItem}><FaPlusCircle /></input>
                 </div>
 
                 <div className="add-to-cart-btn">
-                    <input type='button' className="add-to-cart" onClick={addToCart} value='Comprar' />
+                    <input type='button' className="add-to-cart" onClick={addToCart} value='Agregar al carrito' />
                 </div>
 
             </div>

@@ -7,20 +7,21 @@ const NavBar = () => {
 
     const [showNavBar, setShowNavBar] = useState(false);
 
-    const openNavBar = () => {
+    const openNavBar = (e) => {
+        e.preventDefault();
         setShowNavBar(!showNavBar);
     }
 
     return (
         <>
             <div className="menu-toggler-container">
-                <a href="#" className="menu-toggler hidden" onClick={openNavBar}><HiMenu /></a>
+                <input type="button" className="menu-toggler hidden" onClick={openNavBar}><HiMenu /></input>
             </div>
 
             <nav className="navBar">
                 <ul className={`navBar-list ${showNavBar ? 'nav-opened' : 'nav-closed'}`}>
                     <li className="navBar-list-item"><Link to="/aboutUs">About us</Link></li>
-                    <li className="navBar-list-item"><Link to="/shopNow">Shop now</Link></li>
+                    <li className="navBar-list-item"><Link to="/shopNow/all">Shop now</Link></li>
                     <li className="navBar-list-item"><Link to="/slowBlogZone">Slow Blog zone</Link></li>
                     <li className="navBar-list-item"><Link to="/contactUs">Contact us</Link></li>
                 </ul>

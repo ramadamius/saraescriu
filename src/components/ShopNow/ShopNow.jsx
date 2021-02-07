@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { getFirestore } from '../../firebase';
 import ProductBox from '../general/ProductBox/ProductBox';
 import ProductDetail from '../ProductDetail/ProductDetail/ProductDetail';
@@ -6,6 +7,7 @@ import './shopnow.css';
 
 const ShopNow = () => {
     const db = getFirestore();
+    const {urlPar} = useParams
     /***************************************************************************/
     const [cat, setCat] = useState('');
     const [categories, setCategories] = useState(['tops', 'accessories', 'all']);
@@ -40,7 +42,7 @@ const ShopNow = () => {
                     <ul className="category-list">
                         {
                             categories.map(category =>
-                                <li className="category-item" onClick={() => getCat(category)}>{category}</li>
+                                <li className="category-item" onClick={() => getCat(category)}><Link to={`/shopNow/${category}`}>{category}</Link></li>
                             )
                         }
                     </ul>

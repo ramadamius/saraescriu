@@ -54,7 +54,7 @@ const Cart = ({ }) => {
                             }
                         </ul>
                         <div className="check-out">
-                            <Link to='/checkout'> Check out</Link>
+                            <Link to='/checkout' className="checkout-btn"> Check out</Link>
                         </div>
                     </div> :
     <div className="cart-container no-item">
