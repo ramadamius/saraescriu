@@ -196,6 +196,9 @@
 
 .counterBtn {
     color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    border: none;
 }
 
 .increaser:hover {

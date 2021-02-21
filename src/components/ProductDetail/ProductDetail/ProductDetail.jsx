@@ -80,9 +80,9 @@ const ProductDetail = ({ product }) => {
                 </div>
 
                 <div className="counter-wrapper">
-                    <input type="button" className="counterBtn reducer" onClick={removeItem}><FaMinusCircle /></input>
+                    <button className="counterBtn reducer" onClick={removeItem}><FaMinusCircle /></button>
                     <p className="counter-display">{countProd}</p>
-                    <input type="button" className="counterBtn increaser" onClick={addItem}><FaPlusCircle /></input>
+                    <button className="counterBtn increaser" onClick={addItem}><FaPlusCircle /></button>
                 </div>
 
                 <div className="add-to-cart-btn">
