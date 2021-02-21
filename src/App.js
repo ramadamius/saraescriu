@@ -17,78 +17,48 @@ function App() {
         items: [],
     });
 
-    return ( <
-        Store.Provider value = {
-            [data, setData]
-        } >
-        <
-        div className = 'App' >
-        <
-        BrowserRouter >
-        <
-        HeaderAndNav / >
+    return ( 
+        <Store.Provider value = {[data, setData]} >
+        <div className = 'App' >
+            <BrowserRouter>
+                <HeaderAndNav/>
+                <Switch>
+                    <Route exact path = '/' >
+                        <FeaturedProducts/>
+                    </Route>
 
-        <
-        Switch >
+                    <Route path = '/aboutUs' >
+                        <ComingSoon/>
+                    </Route>
 
-        <
-        Route exact path = '/' >
-        <
-        FeaturedProducts / >
-        <
-        /Route>
+                    <Route path = '/shopNow/:category' >
+                        <ShopNow/>
+                    </Route>
 
-        <
-        Route path = '/aboutUs' >
-        <
-        ComingSoon / >
-        <
-        /Route >
+                    <Route path = '/checkout' >
+                        <Checkout/>
+                    </Route>
 
-        <
-        Route path = '/shopNow/:category' >
-        <
-        ShopNow / >
-        <
-        /Route> <
-        Route path = '/checkout' >
-        <
-        Checkout / >
-        <
-        /Route> <
-        Route path = '/slowBlogZone' >
-        <
-        ComingSoon / >
-        <
-        /Route>
+                    <Route path = '/slowBlogZone' >
+                        <ComingSoon/>
+                    </Route>
 
-        <
-        Route path = '/contactUs' >
-        <
-        ComingSoon / >
-        <
-        /Route>
+                    <Route path = '/contactUs' >
+                        <ComingSoon/>
+                    </Route>
 
-        <
-        Route path = '/productDetail/:productId' >
-        <
-        ProductDetailDM / >
-        <
-        /Route>
+                    <Route path = '/productDetail/:productId' >
+                        <ProductDetailDM/>
+                    </Route>
 
-        <
-        Route path = '/cart' >
-        <
-        Cart / >
-        <
-        /Route> < /
-        Switch > <
-        Footer / >
-        <
-        /BrowserRouter> < /
-        div >
-        <
-        /Store.Provider>
+                    <Route path = '/cart' >
+                        <Cart/>
+                    </Route>
+                </Switch> 
+            <Footer/>
+            </BrowserRouter>
+        </div >
+    </Store.Provider>
     );
 }
 

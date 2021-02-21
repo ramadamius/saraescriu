@@ -15,7 +15,7 @@ const NavBar = () => {
     return (
         <>
             <div className="menu-toggler-container">
-                <input type="button" className="menu-toggler hidden" onClick={openNavBar}><HiMenu /></input>
+                <button className="menu-toggler hidden" onClick={openNavBar}><HiMenu /></button>
             </div>
 
             <nav className="navBar">

@@ -27,9 +27,7 @@ const WidgetCart = ({ show, action }) => {
     return (
         <div className={`widget-cart ${show ? 'open' : 'close'}`}>
             <div className="cartwidget-button">
-                <input type="button" className="cart-widget-btn closeBtn" onClick={action}>
-                    X
-                </input>
+                <input type="button" value = "X" className="cart-widget-btn closeBtn" onClick={action}/>
             </div>
             {
                 items.length > 0
